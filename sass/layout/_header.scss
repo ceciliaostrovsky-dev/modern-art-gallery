@@ -111,6 +111,7 @@
   }
 
   .btn {
+    padding-top: 2rem;
     @include breakpoint(desktop) {
       margin-left: -4rem;
       grid-column: 3 / 4;
