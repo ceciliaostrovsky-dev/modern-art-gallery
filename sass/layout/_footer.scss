@@ -1,0 +1,126 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+
+.footer {
+  margin-top: 7.5rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  width: calc(100% + 2rem);
+  background-color: $almost-black;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @include breakpoint(tablet) {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    width: calc(100% + 4rem);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3.5rem 2.5rem;
+  }
+
+  @include breakpoint(desktop) {
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
+
+  &__logo {
+    padding-top: 3rem;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+
+    @include breakpoint(tablet) {
+      padding-top: 0;
+    }
+    @include breakpoint(desktop) {
+      width: 160px;
+      height: auto;
+    }
+    &:hover {
+      transform: translateY(-3px);
+      opacity: 0.6; // O el efecto filter que prefieras
+    }
+  }
+
+  &__information {
+    padding-top: 2.25rem;
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $light-grey;
+
+    @include breakpoint(tablet) {
+      padding-top: 0;
+      max-width: 300px;
+      padding-right: 1rem;
+      @include font-body-s;
+      text-align: justify;
+    }
+    @include breakpoint(desktop) {
+      max-width: 430px;
+      padding-right: 0;
+    }
+  }
+
+  &__socials {
+    padding-top: 2.25rem;
+    @include breakpoint(tablet) {
+      padding-top: 0;
+    }
+
+    &-list {
+      display: flex;
+      gap: 1.25rem;
+      @extend %reset-list;
+      padding-bottom: 3rem;
+    }
+
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.7;
+        transform: translateY(-3px);
+      }
+    }
+
+    &-icon {
+      display: block;
+      width: 24px;
+      height: auto;
+    }
+  }
+
+  &--light {
+    background-color: $gold;
+    margin-top: 0;
+
+    @include breakpoint(tablet) {
+      margin: 0;
+      width: 100%;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+    @include breakpoint(desktop) {
+      padding: 5rem 10rem 6.5rem;
+    }
+
+    .footer__logo,
+    .footer__socials-icon {
+      filter: brightness(0);
+    }
+
+    .footer__information {
+      color: $almost-black;
+    }
+  }
+}

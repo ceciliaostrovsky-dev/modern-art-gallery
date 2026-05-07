@@ -1,0 +1,102 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.location__header {
+  position: relative;
+
+  .btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    @include breakpoint(tablet) {
+      left: 2.5rem;
+    }
+
+    @include breakpoint(desktop) {
+      left: 10rem;
+      font-size: 20px;
+    }
+  }
+}
+
+.location__map {
+  width: 100%;
+  aspect-ratio: 365/550;
+  object-fit: cover;
+  display: block;
+
+  @include breakpoint(tablet) {
+    aspect-ratio: 768/600;
+  }
+
+  @include breakpoint(desktop) {
+    aspect-ratio: 1440/600;
+  }
+}
+
+.location-info {
+  background-color: $almost-black;
+  padding: 3rem 1rem 0;
+
+  @include breakpoint(tablet) {
+    padding: 5rem 2.5rem;
+    display: flex;
+    align-items: start;
+    gap: 4rem;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 6.5rem 10rem 8rem;
+    gap: 12.5rem;
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 900;
+    color: $white;
+
+    @include breakpoint(tablet) {
+      font-size: 56px;
+      line-height: 1.25;
+    }
+  }
+
+  &__address {
+    padding-top: 3rem;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 2rem;
+    color: $gold;
+
+    @include breakpoint(tablet) {
+      padding-top: 0;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    @include breakpoint(desktop) {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+
+  &__locality,
+  &__opening {
+    @include font-body-s;
+    color: $light-grey;
+    padding-top: 1.25rem;
+
+    @include breakpoint(tablet) {
+      @include font-body-m;
+    }
+  }
+
+  &__opening {
+    padding-bottom: 3.5rem;
+    @include breakpoint(tablet) {
+      padding-bottom: 0;
+    }
+  }
+}

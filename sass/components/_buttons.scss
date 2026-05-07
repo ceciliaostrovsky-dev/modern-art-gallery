@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+
+.btn {
+  display: inline-flex;
+  font-family: $font-primary;
+  font-size: 1rem; //16px
+  font-weight: 800;
+  letter-spacing: 3.64px;
+  color: $white;
+  text-decoration: none;
+
+  &__text {
+    background-color: $almost-black;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+  }
+  &__icon-box {
+    background-color: $gold;
+    padding: 1.25rem;
+    @extend %flex-center;
+    transition: background-color 0.3s ease;
+
+    img {
+      display: block;
+    }
+  }
+
+  &:hover {
+    .btn__text {
+      background-color: $gold;
+    }
+    .btn__icon-box {
+      background-color: $almost-black;
+    }
+  }
+}
