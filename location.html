@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS Proyectos 3 Modern Art Gallery</title>
+    <title>CSS Proyectos 3 Ubicación - Modern Art Gallery</title>
     <meta
       name="description"
-      content="Discover the inspiration behind the works at the Modern Art Gallery. 
-      Visit our free collections in Newport, RI, open from 8am to 9pm."
+      content="Find the location of Modern Art Gallery"
     />
 
     <meta property="og:title" content="" />
@@ -24,7 +23,6 @@
       href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Outfit&display=swap"
       rel="stylesheet"
     />
-
     <link rel="manifest" href="/modern-art-gallery/assets/site-BxrbV1h7.webmanifest" />
     <meta name="theme-color" content="#fafafa" />
     <script type="module" crossorigin src="/modern-art-gallery/assets/main-DtikGszN.js"></script>
@@ -32,71 +30,40 @@
   </head>
 
   <body>
-    <div class="container">
-      <header class="header">
+    <div class="container container--location">
+      <header class="location__header">
+        <a href="./index.html" class="btn">
+          <span class="btn__icon-box">
+            <img src="data:image/svg+xml,%3csvg%20width='10'%20height='25'%20viewBox='0%200%2010%2025'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Path%202'%20d='M8.60107%2024.2773L0.601074%2012.2773L8.60107%200.277344'%20stroke='white'/%3e%3c/svg%3e" alt="Volver al inicio" />
+          </span>
+          <span class="btn__text">BACK TO HOME</span>
+        </a>
         <img
-          src="/modern-art-gallery/assets/galeria1-vn-f8qBr.png"
-          alt="Visitantes observando cuadro entrada"
-          class="header__img-principal"
+          src="/modern-art-gallery/assets/maps-CPsPLB1t.png"
+          alt="Localización Galería de Arte"
+          class="location__map"
         />
-        <div class="header__content">
-          <h1 class="header__title">
-            MODERN <br />
-            ART GALLERY
-          </h1>
-          <p class="header__description">
-            The arts in the collection of the Modern Art Gallery all started
-            from a spark of inspiration. Will these pieces inspire you? Visit us
-            and find out.
-          </p>
-          <a href="./location.html" class="btn">
-            <span class="btn__text">OUR LOCATION</span>
-            <span class="btn__icon-box">
-              <img src="data:image/svg+xml,%3csvg%20width='10'%20height='25'%20viewBox='0%200%2010%2025'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Path%202'%20d='M0.416016%200.277344L8.41602%2012.2773L0.416016%2024.2773'%20stroke='white'/%3e%3c/svg%3e" alt="flecha para ir" />
-            </span>
-          </a>
-        </div>
       </header>
+
       <main>
-        <section class="gallery">
-          <img
-            src="/modern-art-gallery/assets/galeria2-D8k_Widc.png"
-            alt="Sala de exposición de la galería"
-            class="gallery__img--hall"
-            loading="lazy"
-          />
-          <div class="gallery__content">
-            <h2 class="gallery__title">YOUR DAY AT THE GALLERY</h2>
-            <p class="gallery__description">
-              Wander through our distinct collections and find new insights
-              about our artists. Dive into the details of their creative
-              process.
+        <section class="location-info">
+          <h1 class="location-info__title">OUR LOCATION</h1>
+          <div class="location-info__details">
+            <h2 class="location-info__address">99 KING STREET</h2>
+            <p class="location-info__locality">
+              Newport <br />
+              RI 02840 <br />
+              United States of America
             </p>
-          </div>
-
-          <img
-            src="/modern-art-gallery/assets/galeria4-BmH1j-9w.png"
-            alt="Banco de descanso"
-            class="gallery__img--seating-area"
-            loading="lazy"
-          />
-          <img
-            src="/modern-art-gallery/assets/galeria3-BEai2W4Z.png"
-            alt="Visitantes observando cuadros"
-            class="gallery__img--exhibition"
-            loading="lazy"
-          />
-
-          <div class="gallery__dark">
-            <h2 class="gallery__title">COME & BE INSPIRED</h2>
-            <p class="gallery__description">
-              We’re excited to welcome you to our gallery and see how our
-              collections influence you.
+            <p class="location-info__opening">
+              Our newly opened gallery is located near the Edward King House on
+              99 King Street, the Modern Art Gallery is free to all visitors and
+              open seven days a week from 8am to 9pm.
             </p>
           </div>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer footer--light">
         <a href="index.html">
           <img
             src="/modern-art-gallery/assets/logo_footer-Ml9-K_Zg.svg"
@@ -108,7 +75,7 @@
           The Modern Art Gallery is free to all visitors and open seven days a
           week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
         </p>
-        <nav class="footer__socials" aria-label="Social media links">
+        <nav class="footer__socials" aria-label="Redes sociales">
           <ul class="footer__socials-list">
             <li class="footer__socials-item">
               <a href="#" class="footer__socials-link">
